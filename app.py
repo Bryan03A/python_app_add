@@ -12,5 +12,5 @@ def index():
             result = float(num1) + float(num2)
     return render_template('index.html', result=result)
 
-if __name__ == '__main__':
-    app.run(debug=True, port=6001)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 6001)))
